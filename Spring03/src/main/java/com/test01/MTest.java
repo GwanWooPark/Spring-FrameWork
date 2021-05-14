@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class MTest {
 
     public static void main(String[] args) {
-        ApplicationContext factory = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext factory = new ClassPathXmlApplicationContext("test01.xml");
 
         AbstractTest today = factory.getBean("singleton", AbstractTest.class);
         System.out.println("오늘은 " + today.dayInfo() + "입니다");

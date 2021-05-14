@@ -2,6 +2,7 @@ package com.test03;
 
 import org.springframework.stereotype.Component;
 
+// <bean id="samsung" class="com.test03.SamsungTV"/>
 @Component("samsung")
 public class SamsungTV implements TV{
 

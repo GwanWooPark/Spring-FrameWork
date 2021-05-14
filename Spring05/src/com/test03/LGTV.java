@@ -3,7 +3,7 @@ package com.test03;
 import org.springframework.stereotype.Component;
 
 
-// <bean id="lg" class="com.test03.LGTV"/>
+// <bean id="lgTV" class="com.test03.LGTV"/>
 @Component
 public class LGTV implements TV{
 

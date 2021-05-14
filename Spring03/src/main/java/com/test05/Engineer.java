@@ -13,6 +13,14 @@ public class Engineer {
         this.dept = dept;
     }
 
+    public Emp getEmp() {
+        return emp;
+    }
+
+    public void setEmp(Emp emp) {
+        this.emp = emp;
+    }
+
     public String getDept() {
         return dept;
     }

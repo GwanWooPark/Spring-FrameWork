@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="null" class="com.test01.MessageBeanImpl">
+        <constructor-arg name="fruit" value="널"/>
+        <constructor-arg name="cost" value="0"/>
+    </bean>
+
+    <bean id="apple" class="com.test01.MessageBeanImpl">
+        <constructor-arg name="fruit" value="사과"/>
+        <constructor-arg name="cost" value="1000"/>
+    </bean>
+
+    <bean id="mango" class="com.test01.MessageBeanImpl">
+        <constructor-arg name="fruit" value="망고"/>
+        <constructor-arg name="cost" value="1500"/>
+    </bean>
+
+    <bean id="banana" class="com.test01.MessageBeanImpl">
+        <constructor-arg name="fruit" value="바나나"/>
+        <constructor-arg name="cost" value="2000"/>
+    </bean>
+
+
+</beans>

@@ -3,6 +3,7 @@ package com.test02;
 public class Emp {
 
     private String name;
+
     private int salary;
 
     public Emp() {

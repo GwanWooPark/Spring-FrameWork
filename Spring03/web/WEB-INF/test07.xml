@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+    <bean name="samsung" class="com.test07.SamsungTV" lazy-init="true"/>
+    <!-- 기본으로 컨테이너가 생성 시 instance가 만들어지지만 lazy-init 속성을 true로 설정해 놓으면 컨테이너 생성시에
+         객체가 생성되지 않게한다. -->
+    <bean name="lg" class="com.test07.LGTV"/>
+</beans>

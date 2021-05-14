@@ -7,6 +7,7 @@ public abstract class AbstractTest {
 
     public abstract String dayInfo();
 
+
     public static AbstractTest getInstance() {
 
         GregorianCalendar cal = new GregorianCalendar();
@@ -24,5 +25,4 @@ public abstract class AbstractTest {
 
         return null;
     }
-
 }

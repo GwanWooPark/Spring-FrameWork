@@ -1,69 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xmlns:c="http://www.springframework.org/schema/c"
-       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="singleton" class="com.test01.AbstractTest" factory-method="getInstance"/>
-    <!-- Abstract singleton = AbstractTest.getInstance(); -->
-
-    <!-- 1명은 생성자 주입 -->
-    <bean id="lee" class="com.test02.Emp">
-        <constructor-arg name="name" value="lee"/>
-        <constructor-arg name="salary" value="15000"/>
-    </bean>
-
-    <!-- 1명은 setter 주입 -->
-    <bean id="park" class="com.test02.Emp">
-        <property name="name" value="park"/>
-        <property name="salary" value="10000"/>
-    </bean>
-
-    <!-- 모두한 4500000 java (Developer) -->
-    <bean id="mo" class="com.test03.developer">
-        <constructor-arg name="name" value="모두한"/>
-        <constructor-arg name="salary" value="4500000"/>
-        <property name="dept" value="Developer"/>
-    </bean>
-
-    <!-- 안재웅 4500000 java (Engineer) -->
-    <bean id="ahn" class="com.test03.Engineer">
-        <constructor-arg name="name" value="안재웅"/>
-        <constructor-arg name="salary" value="4500000"/>
-        <property name="dept" value="Engineer"/>
-    </bean>
-
-    <bean id="baek" class="com.test04.Emp">
-        <property name="name" value="백주환"/>
-        <property name="salary" value="3000000"/>
-    </bean>
-
-    <bean id="baeks" class="com.test04.Developer">
-        <constructor-arg name="emp" ref="baek"/>
-        <constructor-arg name="dept" value="JAVA"/>
-    </bean>
-
-    <bean name="hong" class="com.test04.Emp">
-        <property name="name" value="홍길동"/>
-        <property name="salary" value="300000"/>
-    </bean>
-
-    <bean name="hongs" class="com.test04.Engineer">
-        <constructor-arg ref="hong"/>
-        <constructor-arg name="dept" value="기술"/>
-    </bean>
-
-    <!-- c: constructor -->
-    <bean name="choi" class="com.test05.Emp" c:name="최강" c:salary="30000000"/>
-    <bean name="chois" class="com.test05.Developer" c:emp-ref="choi" c:dept="java 1팀"/>
-
-    <!-- p: property -->
-    <bean name="kim" class="com.test05.Emp" p:name="김가루" p:salary="2500000"/>
 
 
-    <bean name="samsung" class="com.test07.SamsungTV" lazy-init="true"/>
-    <!-- 기본으로 컨테이너가 생성 시 instance가 만들어지지만 lazy-init 속성을 true로 설정해 놓으면 컨테이너 생성시에
-         객체가 생성되지 않게한다. -->
-    <bean name="lg" class="com.test07.LGTV"/>
 </beans>

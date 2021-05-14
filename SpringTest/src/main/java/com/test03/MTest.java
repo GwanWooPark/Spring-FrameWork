@@ -14,13 +14,13 @@ public class MTest {
         // Resource res = new ClassPathResource("src/com/test03/bean.xml");
 
         // 3. 현재 방식
-        ApplicationContext factory = new ClassPathXmlApplicationContext("com/test03/bean.xml");
+        ApplicationContext factory = new ClassPathXmlApplicationContext("bean.xml");
 
         MessageBean bean = (MessageBean) factory.getBean("english");
         bean.sayHello("Spring");
 
         bean = (MessageBean) factory.getBean("korean");
-        bean.sayHello("박관");
+        bean.sayHello("박관우");
     }
 }
 
