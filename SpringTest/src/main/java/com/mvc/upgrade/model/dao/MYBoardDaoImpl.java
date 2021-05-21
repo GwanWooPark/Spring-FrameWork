@@ -30,10 +30,11 @@ public class MYBoardDaoImpl implements MYBoardDao {
 
 	@Override
 	public MYBoardDto selectOne(int myno) {
+
 		MYBoardDto dto = null;
 		
 		try {
-			dto = sqlSession.selectOne(NAMESPACE + "selectOne",myno);
+			dto = sqlSession.selectOne(NAMESPACE + "selectOne", myno);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -43,21 +44,21 @@ public class MYBoardDaoImpl implements MYBoardDao {
 	@Override
 	public int insert(MYBoardDto dto) {
 		int res = 0;
-		res = sqlSession.insert(NAMESPACE + "insert",dto);
+		res = sqlSession.insert(NAMESPACE + "insert", dto);
 		return res;
 	}
 
 	@Override
 	public int update(MYBoardDto dto) {
 		int res = 0;
-		res = sqlSession.update(NAMESPACE + "update" ,dto);
+		res = sqlSession.update(NAMESPACE + "update", dto);
 		return res;
 	}
 
 	@Override
 	public int delete(int myno) {
 		int res = 0;
-		res = sqlSession.delete(NAMESPACE + "delete",myno);
+		res = sqlSession.delete(NAMESPACE + "delete", myno);
 		return res;
 	}
 
