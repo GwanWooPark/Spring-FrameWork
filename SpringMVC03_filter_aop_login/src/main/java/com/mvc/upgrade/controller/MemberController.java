@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.Map;
 
 @Controller
@@ -31,11 +32,26 @@ public class MemberController {
     }
 
     @ResponseBody
-    @RequestMapping(value = "ajaxlogin.do", method = RequestMethod.POST)
+    @RequestMapping(value = "ajaxLogin.do", method = RequestMethod.POST)
     public Map<String, Boolean> ajaxLogin(@RequestBody MemberDto dto, HttpSession session) {
 
+        /*
+            @RequestBody : request 객체의 body에 저장되어 넘어오는 데이터 -> Java object에 binding
+            @ResponseBody : Java obejct -> response 객체의 body에 binding
+         */
 
+        logger.info("[Controller] ajaxLogin.do");
 
-        return null;
+        MemberDto res = biz.login(dto);
+        boolean check = false;
+
+        if (res != null) {
+            check = true;
+            session.setAttribute("login", res);
+        }
+        Map<String, Boolean> map = new HashMap<String, Boolean>();
+        map.put("check", check);
+
+        return map;
     }
 }
