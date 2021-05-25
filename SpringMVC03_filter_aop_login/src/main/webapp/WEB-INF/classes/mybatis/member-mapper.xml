@@ -9,4 +9,8 @@
         AND MEMBERPW = #{memberpw}
     </select>
 
+    <insert id="signUp" parameterType="memberDto">
+        INSERT INTO MYMEMBER
+        VALUES (MYNOSEQ.NEXTVAL, #{memberid}, #{memberpw}, #{membername})
+    </insert>
 </mapper>
