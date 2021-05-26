@@ -6,11 +6,10 @@
         SELECT MEMBERNO, MEMBERID, MEMBERPW, MEMBERNAME
         FROM MYMEMBER
         WHERE MEMBERID = #{memberid}
-        AND MEMBERPW = #{memberpw}
     </select>
 
     <insert id="signUp" parameterType="memberDto">
         INSERT INTO MYMEMBER
-        VALUES (MYNOSEQ.NEXTVAL, #{memberid}, #{memberpw}, #{membername})
+        VALUES (MYMEMBERSEQ.NEXTVAL, #{memberid}, #{memberpw}, #{membername})
     </insert>
 </mapper>

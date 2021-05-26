@@ -21,11 +21,11 @@
             </tr>
             <tr>
                 <th>비밀번호</th>
-                <td colspan="2"><input type="text" name="memberpw" disabled="disabled"></td>
+                <td colspan="2"><input type="text" name="memberpw" ></td>
             </tr>
             <tr>
                 <th>이름</th>
-                <td colspan="2"><input type="text" name="membername" disabled="disabled"></td>
+                <td colspan="2"><input type="text" name="membername"></td>
             </tr>
             <tr>
                 <td colspan="3 ">

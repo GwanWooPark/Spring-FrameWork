@@ -12,6 +12,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     private Logger logger = LoggerFactory.getLogger(LoginInterceptor.class);
 
+    // Controller로 들어갈 때
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
 
@@ -21,7 +22,9 @@ public class LoginInterceptor implements HandlerInterceptor {
         if (request.getRequestURI().contains("/loginForm.do") ||
             request.getRequestURI().contains("/ajaxLogin.do") ||
             request.getSession().getAttribute("login") != null ||
-            request.getRequestURI().contains("/test.do")) {
+            request.getRequestURI().contains("/test.do") ||
+            request.getRequestURI().contains("/signUpForm.do") ||
+            request.getRequestURI().contains("/signUpRes.do")) {
             return true;
         }
 
@@ -31,6 +34,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         return false;
     }
 
+    // Controller에서 나올 때(ModelAndView가 존재한다)
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object o, ModelAndView modelAndView) throws Exception {
 

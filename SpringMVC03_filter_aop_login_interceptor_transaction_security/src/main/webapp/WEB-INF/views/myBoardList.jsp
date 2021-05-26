@@ -6,6 +6,7 @@
     <title></title>
 </head>
 <body>
+    <h1>Hello, ${login.memberid}</h1>
     <h1>LIST</h1>
     <table border="1">
         <col width="50"/>

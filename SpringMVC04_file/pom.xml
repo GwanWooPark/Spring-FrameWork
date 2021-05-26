@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.mvc</groupId>
-    <artifactId>upgrade</artifactId>
-    <name>SpringMVC03_filter_aop_login_Interceptor_transaction_security</name>
+    <groupId>com.file</groupId>
+    <artifactId>updown</artifactId>
+    <name>SpringMVC04_file</name>
     <version>1.0.0-BUILD-SNAPSHOT</version>
     <build>
         <plugins>
@@ -133,64 +133,15 @@
         </dependency>
 
         <!-- 추가 -->
-        <!-- ojdbc6 -->
         <dependency>
-            <groupId>com.oracle.database.jdbc</groupId>
-            <artifactId>ojdbc6</artifactId>
-            <version>11.2.0.4</version>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.9.0</version>
         </dependency>
-        <!-- mybatis -->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.5.7</version>
-        </dependency>
-        <!-- mybatis-spring -->
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-            <version>2.0.6</version>
-        </dependency>
-        <!-- commons-dbcp2 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-dbcp2</artifactId>
-            <version>2.8.0</version>
-        </dependency>
-        <!--spring-orm -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-orm</artifactId>
-            <version>${org.springframework-version}</version>
-        </dependency>
-
-        <!-- aspectjweaver -->
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
-            <version>${org.aspectj-version}</version>
-        </dependency>
-
-
-        <!-- jackson-core-asl -->
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-core-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-
-        <!-- jackson-mapper-asl -->
-        <dependency>
-            <groupId>org.codehaus.jackson</groupId>
-            <artifactId>jackson-mapper-asl</artifactId>
-            <version>1.9.13</version>
-        </dependency>
-
-        <!-- spring-security-web -->
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-web</artifactId>
-            <version>${org.springframework-version}</version>
+            <groupId>commons-fileupload</groupId>
+            <artifactId>commons-fileupload</artifactId>
+            <version>1.4</version>
         </dependency>
     </dependencies>
 </project>
