@@ -17,7 +17,7 @@ public class ApplicationConfig {
     private String driver;
     @Value("${url}")
     private String url;
-    @Value("${oracle.username}")
+    @Value("${username}")
     private String username;
     @Value("${password}")
     private String password;
