@@ -19,6 +19,16 @@
                     <target>11</target>
                 </configuration>
             </plugin>
+
+            <!-- web.xml 삭제 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.1</version>
+                <configuration>
+                    <failOnMissingWeblXml>false</failOnMissingWeblXml>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 

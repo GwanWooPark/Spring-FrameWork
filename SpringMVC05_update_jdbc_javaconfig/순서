@@ -19,5 +19,7 @@
 
 _javaconfig
 10. com.mvc.update.config/ApplicationConfig
-11. com.mvc.update.config/dispatcherConfig
+11. com.mvc.update.config/dispatcherConfig (impl WebMvcConfigurer)
 12. web.xml
+13. com.mvc.update.config/WebConfig (impl WebApplicationInitializer)
+14. pom.xml

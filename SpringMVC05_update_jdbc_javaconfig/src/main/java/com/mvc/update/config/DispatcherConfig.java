@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan("com.mvc.update")
 // = <mvc:annotation-driven />
-public class dispatcherConfig implements WebMvcConfigurer {
+public class DispatcherConfig implements WebMvcConfigurer {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
