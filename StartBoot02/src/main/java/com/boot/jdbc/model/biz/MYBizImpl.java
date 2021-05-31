@@ -1,0 +1,40 @@
+package com.boot.jdbc.model.biz;
+
+import com.boot.jdbc.model.dto.MYDto;
+import com.boot.jdbc.model.mapper.MYBoardMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+
+@Service
+public class MYBizImpl implements MYBiz{
+
+    @Autowired
+    private MYBoardMapper mapper;
+
+    @Override
+    public List<MYDto> selectList() {
+        return mapper.selectList();
+    }
+
+    @Override
+    public MYDto selectOne(int myno) {
+        return mapper.selectOne(myno);
+    }
+
+    @Override
+    public int insert(MYDto dto) {
+        return mapper.insert(dto);
+    }
+
+    @Override
+    public int update(MYDto dto) {
+        return mapper.update(dto);
+    }
+
+    @Override
+    public int delete(int myno) {
+        return mapper.delete(myno);
+    }
+}
